@@ -36,3 +36,5 @@ This project was designed to address the following analysis goals:
 - Data cleaning: the data was cleaned using Microsoft Excel by removing duplicates from the data.
 - Data analysis: the data was analyzed with the following tools: - Microsoft Excel - used pivot table to organize, summarize, and filter the data for easier representation; SQL - used to query and manipulate the data.
 - Data visualization: the data was visualized using: - Microsoft Excel - charts were created in excel to visually represent the key insights; Power BI - used to create a dashboard to visualize the insights found in excel and SQL.
+### Visual Analysis and inference
+## 1. Total Revenue by Region
