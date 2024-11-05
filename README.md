@@ -38,3 +38,4 @@ This project was designed to address the following analysis goals:
 - Data visualization: the data was visualized using: - Microsoft Excel - charts were created in excel to visually represent the key insights; Power BI - used to create a dashboard to visualize the insights found in excel and SQL.
 ### Visual Analysis and inference
 ## 1. Total Revenue by Region
+![Total revenue by region](https://github.com/user-attachments/assets/9c1bc98f-c42b-4f3b-b9e9-768ae4d334d8)
