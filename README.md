@@ -20,8 +20,11 @@ The dataset includes the following key columns:
 ----------------
 This project was designed to address the following analysis goals:
 - Revenue by region: determine the total revenue generated in each region.
-- Region by quantity sold: analyze the number of units sold across different regions to identify the highest selling locations.
+- Total sales by region: analyze the number of quantities sold across different regions to identify the highest selling locations.
+- Total sales by product: calculate the total sales made from each product.
+- Total sales by month: calculate the total sales made each month on all products.
 - Average revenue by region: calculate the average revenue per sale in each region to assess performance.
+- Total revenue per year: determine the total revenue generated each year.
 ### How To Use The Data
 ---------------
 - Revenue by region: group the data by region and sum the revenue column. This provides an overview of how much revenue each region is generating.
@@ -101,8 +104,23 @@ WHERE Quantity_Sales = 0 AND MONTH(OrderDate) <=4
 - Data analysis: the data was analyzed with the following tools: - Microsoft Excel - used pivot table to organize, summarize, and filter the data for easier representation; SQL - used to query and manipulate the data.
 - Data visualization: the data was visualized using: - Microsoft Excel - charts were created in excel to visually represent the key insights; Power BI - used to create a dashboard to visualize the insights found in excel and SQL.
 ### Visual Analysis and inference
-## 1. Total Revenue by Region
+#### 1. Total Revenue by Region
 
-# Pivot Table
+![Total revenue by region](https://github.com/user-attachments/assets/9c1bc98f-c42b-4f3b-b9e9-768ae4d334d8) ![Revenue by Region Chart](https://github.com/user-attachments/assets/c6e070bd-e698-4f26-8382-2c44049d225b)
 
-![Total revenue by region](https://github.com/user-attachments/assets/9c1bc98f-c42b-4f3b-b9e9-768ae4d334d8)
+#### 2. Total sales by region
+![Region by Quantity sold](https://github.com/user-attachments/assets/69bf053f-3db8-4e1e-8c76-a0aea7aa28a5) ![Region by Quantity Sold Chart](https://github.com/user-attachments/assets/f3c4c642-f587-450f-9f30-70e869bb6a21)
+
+#### 3. Total sales by product
+![Total Sales by Product](https://github.com/user-attachments/assets/65672ac7-68fb-4418-9cf2-5a4090241cd1) ![Totals Sales by Product Chart](https://github.com/user-attachments/assets/77161c19-f5cf-48c1-9072-a2096df96dbf)
+
+#### 4. Total sales by month
+![Total Sales by Month](https://github.com/user-attachments/assets/f50f3c6e-a878-49b1-bfba-6f4a224ac58b) ![Total Sales by Month Chart](https://github.com/user-attachments/assets/0ab8c539-8dc5-4a42-a69c-559fb7fa035f)
+
+#### 5. Average revenue by region
+![Average Sales per Product Pivot](https://github.com/user-attachments/assets/2e46b753-f9f0-4db5-bf54-eba1a0747e92) ![Average Sales per Product](https://github.com/user-attachments/assets/829e7bac-6cfa-41d4-a5bd-108bfcbf1748)
+
+#### 6. Total revenue per year
+![Total Revenue per year](https://github.com/user-attachments/assets/f1f161d3-dca3-4b9a-aae4-43b4801e6976) ![Total revenue per year chart](https://github.com/user-attachments/assets/edbb771c-52ea-43f0-8332-162dca81ce9b)
+
+
