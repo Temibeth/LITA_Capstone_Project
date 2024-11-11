@@ -97,15 +97,13 @@ Select Product, Quantity_Sales, OrderDate
 from [dbo].[Capstone Sales Data]
 WHERE Quantity_Sales = 0 AND MONTH(OrderDate) <=4
  Capstone Sales Data.sql…]()
-
 ###  Tools And Methods Used
 ---------------
-- Data cleaning: the data was cleaned using Microsoft Excel by removing duplicates from the data.
+- Data cleaning: the data was cleaned on Excel by removing duplicates and transformed using Power Query.
 - Data analysis: the data was analyzed with the following tools: - Microsoft Excel - used pivot table to organize, summarize, and filter the data for easier representation; SQL - used to query and manipulate the data.
 - Data visualization: the data was visualized using: - Microsoft Excel - charts were created in excel to visually represent the key insights; Power BI - used to create a dashboard to visualize the insights found in excel and SQL.
 ### Visual Analysis and inference
 #### 1. Total Revenue by Region
-
 ![Total revenue by region](https://github.com/user-attachments/assets/9c1bc98f-c42b-4f3b-b9e9-768ae4d334d8) ![Revenue by Region Chart](https://github.com/user-attachments/assets/c6e070bd-e698-4f26-8382-2c44049d225b)
 
 #### 2. Total sales by region
@@ -124,3 +122,92 @@ WHERE Quantity_Sales = 0 AND MONTH(OrderDate) <=4
 ![Total Revenue per year](https://github.com/user-attachments/assets/f1f161d3-dca3-4b9a-aae4-43b4801e6976) ![Total revenue per year chart](https://github.com/user-attachments/assets/edbb771c-52ea-43f0-8332-162dca81ce9b)
 
 
+
+## PROJECT 2: Customer Segmentation for a Subscription Service
+### Overview
+----------------
+This project involves analyzing customer data for a subscription service to identify segments and trends. The analysis focuses on understanding customer behavior, tracking subscription types, and identifying key trends in cancellations and renewals.
+### Data Collected
+---------------
+The dataset includes the following key columns:
+1.	CUSTOMER ID: unique identifier for each customer.
+2. CustomerName: name of each customer purchasing subscription service. 
+3.	REGION: the geographical area where the company operates.
+4.	SubscriptionType: different ways of charging customers for subscription service.
+5.	SubscriptionStart: the date on which a particular subscription service started.
+7.	SubscriptionEnd: the date on which a particular subscription service ended.
+6.	Canceled: the number of subscription services canceled.
+8.	REVENUE: the total monetary value generated from the sale.
+9.	Subscription Duration: the period of time during which the subscription remains effective under the agreed upon terms and conditions. 
+### Project Objectives
+----------------
+This project was designed to address the following analysis goals:
+- Average subscription duration: calculate the average subscription duration per subscription type to assess performance.
+- Most popular subscription type: calculate the most popular subscription type by the number of customers.
+- Total revenue per subscription type: determine the total revenue generated per subscription type.
+- Total revenue per region: determine the total revenue generated per region.
+### How To Use The Data
+---------------
+- Average subscription duration: sum the subscription duration and divide by the total length of the period.
+- Most popular subscription type: count the subscription duration of each subscription type.
+- Total revenue per subscription type: group the data by subscription type and sum the revenue.
+- Total revenue per region: group the data by region and sum the revenue.
+### Formulas Used
+---------------
+Microsoft Excel
+- Revenue = SUM(range)
+- Average subscription type = AVERAGE(range)
+
+SQL
+-----Most popular subscription type by the number of customers-----
+Select Top 1 SubscriptionType, count(DISTINCT CustomerID) as Total_Number_of_Customers
+from [dbo].[Capstone Customer Data]
+Group by SubscriptionType
+Order by Total_Number_of_Customers Desc;
+
+
+-----Customers who canceled their subscription within 6 months------
+SELECT CustomerID
+FROM [dbo].[Capstone Customer Data]
+WHERE DATEDIFF(MONTH, 2022-01-31, 2023-12-31) <= 6;
+
+-----The average subscription duration for all customers-------
+SELECT AVG (Subscription_Duration) As Average_SubscriptionDuration
+FROM [dbo].[Capstone Customer Data]
+
+
+-----Customers with subscriptions longer than 12 months-----
+SELECT CustomerID 
+FROM [dbo].[Capstone Customer Data]
+WHERE DATEDIFF(MONTH, 2022-01-31, 2023-12-31) > 12;
+
+---- Total revenue by subscription type-----
+SELECT SubscriptionType, SUM(revenue) as TotalRevenue
+FROM [dbo].[Capstone Customer Data]
+GROUP BY SubscriptionType;
+
+
+----The top 3 regions by subscription cancellations------
+SELECT Region, COUNT(*) AS SubscriptionEnd_Count
+FROM [dbo].[Capstone Customer Data]
+WHERE SubscriptionEnd is null
+GROUP BY Region
+ORDER BY SubscriptionEnd_Count desc;
+
+SELECT TOP 3 Region, Count (canceled) as Subscription_cancellation
+FROM [dbo].[Capstone Customer Data]
+WHERE Canceled = 1
+GROUP BY Region 
+ORDER BY Subscription_cancellation desc;
+
+----The total number of active and canceled subscriptions-----
+SELECT Count (canceled) as TotalActiveandCanceled_Subscriptions
+FROM [dbo].[Capstone Customer Data]
+
+###  Tools And Methods Used
+---------------
+- Data cleaning: the data was cleaned on Excel by removing duplicates and transformed using Power Query.
+- Data analysis: the data was analyzed with the following tools: - Microsoft Excel - used pivot table to organize, summarize, and filter the data for easier representation; SQL - used to query and manipulate the data.
+- Data visualization: the data was visualized using: - Microsoft Excel - charts were created in excel to visually represent the key insights; Power BI - used to create a dashboard to visualize the insights found in excel and SQL.
+### Visual Analysis and inference
+#### 1. 
