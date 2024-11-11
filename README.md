@@ -210,4 +210,15 @@ FROM [dbo].[Capstone Customer Data]
 - Data analysis: the data was analyzed with the following tools: - Microsoft Excel - used pivot table to organize, summarize, and filter the data for easier representation; SQL - used to query and manipulate the data.
 - Data visualization: the data was visualized using: - Microsoft Excel - charts were created in excel to visually represent the key insights; Power BI - used to create a dashboard to visualize the insights found in excel and SQL.
 ### Visual Analysis and inference
-#### 1. 
+#### 1. Average subscription duration
+![Average Subscription Duration ](https://github.com/user-attachments/assets/f119a666-90e7-468a-99de-17f2cdb38d71) ![Average Subscription Duration Chart](https://github.com/user-attachments/assets/01c47e38-d363-41fe-ace5-a3b462a9af24)
+
+#### 2. Most popular subscription type
+![Most Popular Subscription Type](https://github.com/user-attachments/assets/22b40785-3e38-4016-a4d5-57552e4dc912) ![Most Popular Subscription Type Chart](https://github.com/user-attachments/assets/244efecc-4a90-473e-9f8f-beadbc9fa4bb)
+
+#### 3. Total revenue per subscription type
+![Total Revenue per Subscription Type](https://github.com/user-attachments/assets/adfd62cf-d6ac-4437-a5ea-fd3a2f20198e) ![Total Revenue Per Subscription Type Chart](https://github.com/user-attachments/assets/e954680d-f334-4c5b-97bf-967aa5e63e81)
+
+#### 4. Total revenue per region
+![Total Revenue per Region](https://github.com/user-attachments/assets/362ead6e-78e0-4c0e-955d-66c4fc3965e0) ![Total Revenue Per Region Chart](https://github.com/user-attachments/assets/22c500b7-1b39-4eb3-bc20-5109aa145549)
+
